@@ -1,0 +1,15 @@
+{
+  "name": "ZTH Studio Forge",
+  "slug": "forge",
+  "version": "1.0.0",
+  "id": "Zeruik.ZTH.StudioForge",
+  "appId": "13D372AF-452B-46C3-A3EC-70A809779117",
+  "exe": "ZTH-Studio-Forge.exe",
+  "dataFolder": "ZTH Studio Forge",
+  "folder": "ZTHStudioForge",
+  "releaseName": "ZTH-Studio-Forge-Windows-v1.0.0",
+  "sourceName": "zth-studio-forge-v1",
+  "logo": "logo.svg",
+  "service": "forge",
+  "background": "#f3f6fb"
+}

@@ -1,0 +1,153 @@
+{
+  "product": "ZTH Studio Forge",
+  "version": "1.0.0",
+  "license": "MIT",
+  "electron": "45.0.0",
+  "files": [
+    {
+      "path": ".gitignore",
+      "size": 87,
+      "sha256": "d25321a869ca31ad31bc510ddf356cdc8c91fed52f7c4af07ed0c8e5442309f5"
+    },
+    {
+      "path": "API.md",
+      "size": 3922,
+      "sha256": "052b4aac8890035c063e4b8157325b66f1c344d51c3c092ed69c8a1b3c8b7c9d"
+    },
+    {
+      "path": "BUILD.md",
+      "size": 1097,
+      "sha256": "995c3bf5c02df00a18fa3b5f104bf3ee026aead411b3544aa6325039655b36fc"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size": 1315,
+      "sha256": "6b1f063ccbdfe51983767724657452c36f0f965f4d235fd90c2f4b207b4cefc8"
+    },
+    {
+      "path": "LICENSE",
+      "size": 1073,
+      "sha256": "4ec950bd1257e44455aac2d4327dc4363b3c30050a3e36324f7e25d380cd9b1d"
+    },
+    {
+      "path": "README.md",
+      "size": 11550,
+      "sha256": "c554017ed876d9fc4d07f46eaca2819d293395dd78a3c54699ecffbdcaed6910"
+    },
+    {
+      "path": "app.js",
+      "size": 20651,
+      "sha256": "71b8dd25b31988add02dda0cb448f5f6daffdc6c7e8e34d2f8c87f66f57b9511"
+    },
+    {
+      "path": "backend.cjs",
+      "size": 27313,
+      "sha256": "11f09c621de586fbf0095ee4d3e7e460087d3dbce55b41dd8d30f783ba9a0cc9"
+    },
+    {
+      "path": "build-product.cjs",
+      "size": 14661,
+      "sha256": "f29cad4e346214c4f176b63822f6e41528e84f322b1520023037fef32f60d220"
+    },
+    {
+      "path": "build-release.cjs",
+      "size": 561,
+      "sha256": "5193a81a2b637bf8d1a9fdd434a6f4680dee9e0675758a4937654320cb0e81b8"
+    },
+    {
+      "path": "build-runtime/package-lock.json",
+      "size": 43623,
+      "sha256": "7f6e66e1a61d48b53ad1bcde0d8d73358a0b8f7e8944a7136f9066a139196c9b"
+    },
+    {
+      "path": "build-runtime/package.json",
+      "size": 148,
+      "sha256": "9b8d05235ee29c831eeaaa30f433317d9a9f9c4d9a9169ea43ff6496451b3c61"
+    },
+    {
+      "path": "catalog-browser.js",
+      "size": 6126,
+      "sha256": "258ccbfdbe15da735a6f2e72eada9d8aeea590cbc4bb79e970a17ba14b898870"
+    },
+    {
+      "path": "catalog.cjs",
+      "size": 6295,
+      "sha256": "622d3bd27b973efddf8d7034e846c2210e09271a8a2a58ef570a8daa89a7a5e7"
+    },
+    {
+      "path": "desktop-shell.cjs",
+      "size": 7585,
+      "sha256": "cdea3370158fa50aa1fe7d047469bf5517d2db3868f25d015e210ddacf107303"
+    },
+    {
+      "path": "desktop/icon.ico",
+      "size": 20733,
+      "sha256": "62f5411a64b0a28e8190ab23bb7ea8e48cc52bb011e258a888fd60051127464d"
+    },
+    {
+      "path": "desktop/main.cjs",
+      "size": 7585,
+      "sha256": "cdea3370158fa50aa1fe7d047469bf5517d2db3868f25d015e210ddacf107303"
+    },
+    {
+      "path": "desktop/preload.cjs",
+      "size": 1249,
+      "sha256": "f43b06b437e87c03a646aa89889e96acfac522fbb12cb5abd6fc6630f57c9978"
+    },
+    {
+      "path": "i18n.js",
+      "size": 21761,
+      "sha256": "5fd1867c1d1590316b5f32cf1c5b29465ba09f7d38592968478381969b9cb85f"
+    },
+    {
+      "path": "index.html",
+      "size": 1721,
+      "sha256": "45bfe355e3e57245488f9f67d5df310d7d689df83dfd9b31d13318f3266ae58d"
+    },
+    {
+      "path": "installer-template.cjs",
+      "size": 6602,
+      "sha256": "23a2b12beaa70ab4a8c5e01bdc07d9c09adcb31e050ecb0b2d8780a93375de9d"
+    },
+    {
+      "path": "logo.svg",
+      "size": 108805,
+      "sha256": "43394794021b046404f55cdadf7e25b6d06f09578cf3876170e8b37994d76e37"
+    },
+    {
+      "path": "package.json",
+      "size": 193,
+      "sha256": "c19008f8c421d3633a051450529d65fba942edb3f32859827da19622d9490acc"
+    },
+    {
+      "path": "preload.cjs",
+      "size": 1249,
+      "sha256": "f43b06b437e87c03a646aa89889e96acfac522fbb12cb5abd6fc6630f57c9978"
+    },
+    {
+      "path": "product.json",
+      "size": 420,
+      "sha256": "27b6669112645ccf1a6ad64c9050e57c9f000b3ef7f65992e57d43b65213c901"
+    },
+    {
+      "path": "qa-i18n.cjs",
+      "size": 3414,
+      "sha256": "224c324decda1ce724903ab61a2a1c89bc3868a3f585741010237f65b59e154b"
+    },
+    {
+      "path": "qa-ui.cjs",
+      "size": 3629,
+      "sha256": "2624ecc5a45d0e1ee575d4f45e04dda111fc08ba874fe71ccb49e98b6fec9b63"
+    },
+    {
+      "path": "qa.cjs",
+      "size": 11439,
+      "sha256": "b96f9980816e87f9f640e9e383de18931d223b7f8b7b78b730cbeacfffde0db9"
+    },
+    {
+      "path": "styles.css",
+      "size": 8366,
+      "sha256": "31e1e95d3a7f63f3193cd95a18a3cd0f505a78a8e829a09bcd050c0a9a3a62b7"
+    }
+  ]
+}
