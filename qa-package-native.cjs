@@ -20,7 +20,7 @@ async function smoke(exe,slug){
   await evaluate("document.querySelectorAll('dialog').forEach(d=>d.close());void 0");
   // A CDP Page.close closes a debugging target, not necessarily its Electron
   // native window. Stop only this synthetic process; do not claim OS-close QA.
-  await delay(500);ws.close();child.kill();for(let i=0;i<200&&!exited;i++)await delay(50);assert.ok(exited,'Synthetic delivery process did not terminate');
+  await delay(500);ws.close();child.kill();for(let i=0;i<60&&!exited;i++)await delay(50);if(!exited)child.kill('SIGKILL');for(let i=0;i<100&&!exited;i++)await delay(50);assert.ok(exited,'Synthetic delivery process did not terminate');
   return{passed:true,checks:['Untouched extracted application starts with production entrypoint','Bundled Chinese font loads','Native interface zoom works'],cleanup:'Only the isolated synthetic smoke process was terminated after checks; native window-close behavior is a separate acceptance scope.'};
  }finally{ws?.close();if(!exited)child.kill();child.stdout?.destroy();child.stderr?.destroy();}
 }
