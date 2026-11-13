@@ -9,8 +9,8 @@
     },
     {
       "path": ".github/workflows/native-desktop.yml",
-      "size": 2247,
-      "sha256": "957d29ae641579044e2ff638807591c895c1ec4628326bc7907c7f62110b832e"
+      "size": 2276,
+      "sha256": "9c5beb5cf29352f232a27411c8aada9bb0987f870562c02e3f3eda63c615d048"
     },
     {
       "path": ".gitignore",
@@ -85,7 +85,7 @@
     {
       "path": "CI-ACTIONS.json",
       "size": 765,
-      "sha256": "36c9eac3bdf2c554870c33ebad47f9705bb39da3c7f4fc131c39dcec10ac7bfa"
+      "sha256": "73059bc3067863e998e0674306b41a6369a42ed8da26a9df225ac6e313f07ffa"
     },
     {
       "path": "ci-native.cjs",
@@ -254,8 +254,8 @@
     },
     {
       "path": "qa-package-native.cjs",
-      "size": 6334,
-      "sha256": "c70fee148dead0c889ed3f3594ae9c2b68d8f79f82ba8daf3db298f59afd3bf5"
+      "size": 6472,
+      "sha256": "600bcb1a8668c1451e556c2ab0ccbccc7903cc4c7fa7b460c7820e3e87c212c3"
     },
     {
       "path": "qa-platform.cjs",

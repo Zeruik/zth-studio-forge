@@ -14,9 +14,9 @@ async function smoke(exe,slug){
   const call=(method,params={})=>new Promise((resolve,reject)=>{const n=++id,timer=setTimeout(()=>{pending.delete(n);reject(Error('CDP_TIMEOUT '+method));},30000);pending.set(n,{resolve,reject,timer});ws.send(JSON.stringify({id:n,method,params}));});
   const evaluate=async expression=>{const r=await call('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw Error('DELIVERY_JS '+JSON.stringify(r.exceptionDetails));return r.result?.value;};
   const ready=slug==='studio-desk'?'window.DeskApp?.initialized':slug==='screen-studio'?'!!window.ScreenStudio':"!!document.querySelector('[data-view=dataset]')";
-  let good=false;for(let i=0;i<600;i++){if(await evaluate(ready)){good=true;break;}if(exit!==null)break;await delay(50);}assert.ok(good,'Final delivery did not initialize');
+  let good=false;for(let i=0;i<600;i++){try{if(await evaluate(ready)){good=true;break;}}catch(e){if(!/navigated|Execution context was destroyed|Cannot find context/.test(e.message))throw e;}if(exit!==null)break;await delay(50);}assert.ok(good,'Final delivery did not initialize');
   const font=await evaluate(`(async()=>{await document.fonts.load('18px "ZTH UI"');return [...document.fonts].some(f=>f.family.replaceAll('"','')==='ZTH UI'&&f.status==='loaded');})()`);assert.equal(font,true,'Final delivery CJK font');
-  const scale=slug==='studio-desk'?'studioDesk':'studioDesktop';await evaluate(scale+'.interface(1.25)');assert.equal(await evaluate(scale+'.interface().zoom'),1.25);
+  const scale=slug==='studio-desk'?'studioDesk':'studioDesktop';await evaluate(scale+'.interface(1.25)');assert.equal(await evaluate('(async()=> (await '+scale+'.interface()).zoom)()'),1.25);
   await evaluate("document.querySelectorAll('dialog').forEach(d=>d.close());void 0");
   // CDP only belongs to this ephemeral runner process and is never in a shortcut.
   await call('Page.close');for(let i=0;i<200&&exit===null;i++)await delay(50);
@@ -31,4 +31,4 @@ async function verify(result,{root=__dirname}={}){
  return{passed:true,reports,scope:'Exact package extraction/install on the matching ephemeral native runner; no external-download Gatekeeper quarantine or arbitrary Linux distribution claim.'};
 }
 if(require.main===module)fs.readFile(process.argv[2],'utf8').then(JSON.parse).then(r=>verify(r)).then(async r=>{await fs.writeFile(process.argv[3],JSON.stringify(r,null,2)+'\n');console.log('PASS exact native deliveries: '+r.reports.map(p=>p.format).join(', '));}).catch(e=>{console.error(e.stack);process.exitCode=1;});
-module.exports={verify};
+module.exports={verify,smoke};

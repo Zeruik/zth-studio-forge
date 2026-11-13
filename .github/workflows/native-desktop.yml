@@ -16,7 +16,7 @@ permissions:
   contents: write
 concurrency:
   group: native-${{ github.ref }}-${{ github.event_name }}
-  cancel-in-progress: false
+  cancel-in-progress: ${{ github.event_name == 'push' }}
 jobs:
   native:
     strategy:
