@@ -1,8 +1,9 @@
 'use strict';
 const {contextBridge,ipcRenderer}=require('electron');
-contextBridge.exposeInMainWorld('studioDesktop',{info:()=>ipcRenderer.invoke('studio:info')});
+contextBridge.exposeInMainWorld('studioDesktop',{info:()=>ipcRenderer.invoke('studio:info'),interface:value=>ipcRenderer.invoke('studio:interface',value)});
 contextBridge.exposeInMainWorld('studioForge',{
- catalog:()=>ipcRenderer.invoke('forge:catalog'),history:()=>ipcRenderer.invoke('forge:history'),
+ dataset:(method,...args)=>ipcRenderer.invoke('forge:dataset',method,...args),
+ workspacePreview:o=>ipcRenderer.invoke('forge:workspacePreview',o),createWorkspace:o=>ipcRenderer.invoke('forge:createWorkspace',o),selectWorkspaceManifest:()=>ipcRenderer.invoke('forge:selectWorkspaceManifest'),inspectWorkspace:p=>ipcRenderer.invoke('forge:inspectWorkspace',p),catalog:()=>ipcRenderer.invoke('forge:catalog'),history:()=>ipcRenderer.invoke('forge:history'),
  detect:options=>ipcRenderer.invoke('forge:detect',options),
  deepDetect:distro=>ipcRenderer.invoke('forge:deepDetect',distro),
  createPlan:options=>ipcRenderer.invoke('forge:createPlan',options),

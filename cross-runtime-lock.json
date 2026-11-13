@@ -1,0 +1,88 @@
+{
+  "schema": 1,
+  "verifiedAt": "2026-11-14",
+  "electronVersion": "45.3.2",
+  "pythonVersion": "3.14.10",
+  "targets": {
+    "linux-x64": {
+      "electron": {
+        "file": "electron-v45.3.2-linux-x64.zip",
+        "url": "https://github.com/electron/electron/releases/download/v45.3.2/electron-v45.3.2-linux-x64.zip",
+        "sha256": "0ae270dcca192d2f0a0e2be585307a2460f59303d76b7d19171fc6442d72a829",
+        "size": 123954153
+      },
+      "python": {
+        "file": "cpython-3.14.10+20261110-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz",
+        "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.14.10%2B20261110-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz",
+        "sha256": "c2ff2e97422f5d3896a16e0317fd212ba977bbf2688d93a6f7a03d817506bd30",
+        "size": 36875876
+      },
+      "pythonLicenses": {
+        "file": "cpython-3.14.10+20261110-x86_64-unknown-linux-gnu-pgo+lto-full.tar.zst",
+        "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.14.10%2B20261110-x86_64-unknown-linux-gnu-pgo%2Blto-full.tar.zst",
+        "sha256": "4730c0dc79e7eecbe54a323d587fdeaab621094fe09b5827167d69045115fcbc",
+        "size": 114879558
+      }
+    },
+    "linux-arm64": {
+      "electron": {
+        "file": "electron-v45.3.2-linux-arm64.zip",
+        "url": "https://github.com/electron/electron/releases/download/v45.3.2/electron-v45.3.2-linux-arm64.zip",
+        "sha256": "e869334b60a1768b2cbb0ae066d25de333511cbb1957cdac9a345e120d41e11b",
+        "size": 125039888
+      },
+      "python": {
+        "file": "cpython-3.14.10+20261110-aarch64-unknown-linux-gnu-install_only_stripped.tar.gz",
+        "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.14.10%2B20261110-aarch64-unknown-linux-gnu-install_only_stripped.tar.gz",
+        "sha256": "38fd50f07170adc29d481913d1c30b17ecb538fbe290315fe1f83d84fdd5b694",
+        "size": 30856932
+      },
+      "pythonLicenses": {
+        "file": "cpython-3.14.10+20261110-aarch64-unknown-linux-gnu-pgo+lto-full.tar.zst",
+        "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.14.10%2B20261110-aarch64-unknown-linux-gnu-pgo%2Blto-full.tar.zst",
+        "sha256": "7e6b0d554a93c15186993ee0254c54a590a1dcc8aaf0564f3ada3d76a1d331da",
+        "size": 100357553
+      }
+    },
+    "darwin-x64": {
+      "electron": {
+        "file": "electron-v45.3.2-darwin-x64.zip",
+        "url": "https://github.com/electron/electron/releases/download/v45.3.2/electron-v45.3.2-darwin-x64.zip",
+        "sha256": "64117e1344ea01b749d8ce17b2cfe850e1b321adf844ae9cbfb7a7bfdca11a20",
+        "size": 125175674
+      },
+      "python": {
+        "file": "cpython-3.14.10+20261110-x86_64-apple-darwin-install_only_stripped.tar.gz",
+        "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.14.10%2B20261110-x86_64-apple-darwin-install_only_stripped.tar.gz",
+        "sha256": "85f8e54798e8e6aa58d2253f013d815c5616343cc0d15cbea882fca78bdfeae2",
+        "size": 27139058
+      },
+      "pythonLicenses": {
+        "file": "cpython-3.14.10+20261110-x86_64-apple-darwin-pgo+lto-full.tar.zst",
+        "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.14.10%2B20261110-x86_64-apple-darwin-pgo%2Blto-full.tar.zst",
+        "sha256": "d03fefb70eca64498bf045da3e7b81c531dfa94524ba25fda8ccca5c8d536d04",
+        "size": 63463423
+      }
+    },
+    "darwin-arm64": {
+      "electron": {
+        "file": "electron-v45.3.2-darwin-arm64.zip",
+        "url": "https://github.com/electron/electron/releases/download/v45.3.2/electron-v45.3.2-darwin-arm64.zip",
+        "sha256": "8bdf5d55fbcc2c348b5d34b9e87a364cd2947d00b7c8bfadc6cc50233cd79ac6",
+        "size": 120964377
+      },
+      "python": {
+        "file": "cpython-3.14.10+20261110-aarch64-apple-darwin-install_only_stripped.tar.gz",
+        "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.14.10%2B20261110-aarch64-apple-darwin-install_only_stripped.tar.gz",
+        "sha256": "f15ec3d15460dd66c2eb88639b152cd9040e7d1ece11e38bf89e8f53f0171e02",
+        "size": 26970375
+      },
+      "pythonLicenses": {
+        "file": "cpython-3.14.10+20261110-aarch64-apple-darwin-pgo+lto-full.tar.zst",
+        "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.14.10%2B20261110-aarch64-apple-darwin-pgo%2Blto-full.tar.zst",
+        "sha256": "d14291578918474f3b02d2530c90dcba30efa7ccc0e3b01ae1bfeebbbbcd9f6a",
+        "size": 63843107
+      }
+    }
+  }
+}

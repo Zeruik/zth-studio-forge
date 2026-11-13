@@ -1,15 +1,18 @@
 {
   "name": "ZTH Studio Forge",
   "slug": "forge",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "id": "Zeruik.ZTH.StudioForge",
   "appId": "13D372AF-452B-46C3-A3EC-70A809779117",
   "exe": "ZTH-Studio-Forge.exe",
   "dataFolder": "ZTH Studio Forge",
   "folder": "ZTHStudioForge",
-  "releaseName": "ZTH-Studio-Forge-Windows-v1.0.0",
-  "sourceName": "zth-studio-forge-v1",
+  "releaseName": "ZTH-Studio-Forge-Windows-v3.0.0",
+  "sourceName": "zth-studio-forge-v3",
   "logo": "logo.svg",
   "service": "forge",
-  "background": "#f3f6fb"
+  "background": "#f3f6fb",
+  "creator": "理工阿白菌 / TechABJ",
+  "studio": "赋形造物工作室",
+  "parentStudio": "向阳科创工作室"
 }

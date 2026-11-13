@@ -1,0 +1,63 @@
+name: Native desktop acceptance
+on:
+  push:
+    branches: ['release/**']
+  workflow_dispatch:
+    inputs:
+      upload_to_new_draft:
+        description: Upload verified packages to the new version draft only
+        type: boolean
+        default: false
+      release_tag:
+        description: Must equal product.json version with a v prefix
+        type: string
+        default: v3.0.0
+permissions:
+  contents: write
+concurrency:
+  group: native-${{ github.ref }}-${{ github.event_name }}
+  cancel-in-progress: false
+jobs:
+  native:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: ubuntu-24.04
+            target: linux-x64
+          - runner: ubuntu-24.04-arm
+            target: linux-arm64
+          - runner: macos-15-intel
+            target: darwin-x64
+          - runner: macos-15
+            target: darwin-arm64
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '22'
+      - name: Prepare ephemeral Linux desktop libraries
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y libgtk-3-0t64 libnss3 libgbm1 libasound2t64 libxss1 xvfb xauth zstd
+      - name: Install pinned development dependencies
+        run: npm ci --prefix build-runtime --no-fund --no-audit
+      - name: Build, run, reopen, verify and package the native application
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ZTH_UPLOAD_DRAFT: ${{ inputs.upload_to_new_draft || false }}
+          ZTH_RELEASE_TAG: ${{ inputs.release_tag }}
+        run: node ci-native.cjs
+      - name: Retain compact synthetic acceptance proof for one day
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: native-proof-${{ matrix.target }}-${{ github.run_attempt }}
+          path: ci-proof/*.json
+          if-no-files-found: ignore
+          retention-days: 1

@@ -1,9 +1,8 @@
 {
-  "name": "zth-studio-forge",
-  "version": "1.0.0",
-  "description": "ZTH Studio Forge",
-  "main": "desktop/main.cjs",
+  "name": "zth-forge",
+  "version": "3.0.0",
   "private": true,
-  "license": "MIT",
-  "author": "Zeruik / TechABJ"
+  "main": "desktop/main.cjs",
+  "license": "SEE LICENSE",
+  "author": "TechABJ"
 }

@@ -7,7 +7,7 @@ AppId={{${config.appId}}
 AppName={#AppName}
 AppVersion={#AppVersion}
 VersionInfoVersion=${config.version}.0
-AppPublisher=Zeruik / TechABJ
+AppPublisher=理工阿白菌 / TechABJ
 AppPublisherURL=mailto:zeruik@qq.com
 DefaultDirName={code:DefaultInstallFolder}
 DefaultGroupName={#AppName}
@@ -110,7 +110,7 @@ begin
  Notice := TNewStaticText.Create(WizardForm);Notice.Parent := WizardForm.SelectDirPage;
  Notice.SetBounds(ScaleX(0),ScaleY(148),WizardForm.SelectDirPage.Width,ScaleY(60));
  Notice.WordWrap := True;Notice.AutoSize := False;
- Notice.Caption := Tr('请使用英文路径（盘符、英文字母、数字和常见标点）。个人资料保存在 AppData，卸载时保留；安装器不修改 PATH。','Use an English path. Personal data is retained in AppData on uninstall. Setup does not modify PATH.');
+ Notice.Caption := Tr('请使用英文绝对路径（允许空格）。'+#13#10+'个人资料保存在 AppData，卸载时保留。'+#13#10+'安装器不修改 PATH，也不注册全局 Python。','Use an English absolute path; spaces are allowed.'+#13#10+'Personal data is kept in AppData after uninstall.'+#13#10+'Setup does not modify PATH or register global Python.');
 end;
 function PrepareToInstall(var NeedsRestart: Boolean): String;
 var Version:String;
