@@ -54,8 +54,8 @@
     },
     {
       "path": "build-product.cjs",
-      "size": 16756,
-      "sha256": "a95121af1aff7c8fb776fcb4245012ed58fcd54d226b5df6477cb08212fee49f"
+      "size": 16870,
+      "sha256": "5b2eeee76127bb0175aa27c4ef52dde61724f296030102b34fd1d62f9ba539b1"
     },
     {
       "path": "build-release.cjs",
@@ -85,7 +85,7 @@
     {
       "path": "CI-ACTIONS.json",
       "size": 765,
-      "sha256": "5b71d986aabbe0559d55c274204c0f0cb7f22308731fceefd7925055215bab7f"
+      "sha256": "12790aa336c030ef80f1e7551c6dc09598ec5db7e8425aa0cc5f4fc846d80acc"
     },
     {
       "path": "ci-native.cjs",
@@ -94,8 +94,8 @@
     },
     {
       "path": "cross-platform.cjs",
-      "size": 16059,
-      "sha256": "8a040e983c75c881c6b080540e77bb152257b084b47a759d502b156d22a4e225"
+      "size": 17172,
+      "sha256": "2851d3b779d7b86c79a9dc92cf16756338ba82d7b4be30c9cb761a2ccf4a72b5"
     },
     {
       "path": "cross-runtime-lock.json",
@@ -159,8 +159,8 @@
     },
     {
       "path": "display-controls.css",
-      "size": 1515,
-      "sha256": "e27e097a82ba3198aa2f4b515d5431aed71c26637299f59c6c8e20e21d911be8"
+      "size": 1560,
+      "sha256": "40c367a306e9bc932f56a2e06c5b2e20e5d99d37dc2d6ad47771a062ef8a788b"
     },
     {
       "path": "display-controls.js",
@@ -249,8 +249,8 @@
     },
     {
       "path": "qa-native-platform.cjs",
-      "size": 14447,
-      "sha256": "a2f1fb81fb843499f8172551f3080ecd63f610b1d51798e70a1fda85ae7eb157"
+      "size": 15101,
+      "sha256": "01538ebc874c67441465f746ff84afbad4525c237f67ddf835b1c163600244c0"
     },
     {
       "path": "qa-platform.cjs",

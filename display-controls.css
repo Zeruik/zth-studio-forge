@@ -1,10 +1,10 @@
 .zth-display-control{position:relative;flex:0 0 auto;font-size:12px;color:var(--ink,#183c3b)}
-.zth-display-control summary{display:flex;align-items:center;justify-content:center;gap:5px;min-height:38px;padding:0 10px;border:1px solid var(--line,#d5ded8);border-radius:11px;background:var(--panel,#fffcf5);cursor:pointer;list-style:none;white-space:nowrap;font-weight:600}
+.zth-display-control summary{display:flex;align-items:center;justify-content:center;gap:5px;min-height:38px;padding:0 10px;border:1px solid var(--line,#d5ded8);border-radius:11px;background:var(--surface,var(--panel,#fffcf5));cursor:pointer;list-style:none;white-space:nowrap;font-weight:600}
 .zth-display-control summary::-webkit-details-marker{display:none}
 .zth-display-control summary:focus-visible,.zth-display-control select:focus-visible{outline:3px solid #e6a159;outline-offset:3px}
-.zth-display-popover{position:absolute;right:0;top:calc(100% + 10px);width:245px;padding:16px;border:1px solid var(--line,#d5ded8);border-radius:16px;background:var(--panel,#fffcf5);box-shadow:0 12px 36px #162d2a26;z-index:80}
+.zth-display-popover{position:absolute;right:0;top:calc(100% + 10px);width:245px;padding:16px;border:1px solid var(--line,#d5ded8);border-radius:16px;background:var(--surface,var(--panel,#fffcf5));box-shadow:0 12px 36px #162d2a26;z-index:80}
 .zth-display-popover label{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.zth-display-popover select{max-width:100px;min-height:36px;padding:5px 8px;border:1px solid var(--line,#d5ded8);border-radius:8px;background:var(--panel,#fffcf5);color:inherit}
+.zth-display-popover select{max-width:100px;min-height:36px;padding:5px 8px;border:1px solid var(--line,#d5ded8);border-radius:8px;background:var(--surface,var(--panel,#fffcf5));color:inherit}
 .zth-display-popover button{display:block;width:100%;margin-top:12px;min-height:36px}
 .zth-display-popover small{display:block;margin-top:10px;line-height:1.6;opacity:.75;white-space:normal}
 @media(max-width:620px){.zth-display-control summary{padding:0 7px;min-height:36px}.zth-display-popover{width:220px;right:-8px}}
