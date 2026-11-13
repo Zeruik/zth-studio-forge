@@ -85,7 +85,7 @@
     {
       "path": "CI-ACTIONS.json",
       "size": 765,
-      "sha256": "12790aa336c030ef80f1e7551c6dc09598ec5db7e8425aa0cc5f4fc846d80acc"
+      "sha256": "db971c04294de3840e6a0b056a56900a2bd69d601335830302f9c5dabc92d93a"
     },
     {
       "path": "ci-native.cjs",
@@ -94,8 +94,8 @@
     },
     {
       "path": "cross-platform.cjs",
-      "size": 17172,
-      "sha256": "2851d3b779d7b86c79a9dc92cf16756338ba82d7b4be30c9cb761a2ccf4a72b5"
+      "size": 17174,
+      "sha256": "9cddc27022e4e7cb414009cc4db673a69d4032ca586e45915b38932eb4eee8bf"
     },
     {
       "path": "cross-runtime-lock.json",
