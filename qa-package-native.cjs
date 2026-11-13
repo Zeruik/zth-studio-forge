@@ -6,7 +6,7 @@ async function run(file,args){return new Promise((resolve,reject)=>cp.execFile(f
 async function smoke(exe,slug){
  const profile=await fs.mkdtemp(path.join(await fs.realpath(os.tmpdir()),'zth-delivery-smoke-'));
  const child=cp.spawn(exe,['--zth-profile-dir='+profile,'--remote-debugging-port=0','--remote-debugging-address=127.0.0.1'],{shell:false,stdio:['ignore','pipe','pipe']});
- let log='',exit=null;child.on('error',e=>{log+=e.message;exit=-1;});child.on('exit',c=>{exit=c;});for(const s of [child.stdout,child.stderr])s.on('data',b=>{if(log.length<100000)log+=b;});
+ let log='',exit=null,exited=false;child.on('error',e=>{log+=e.message;exit=-1;exited=true;});child.on('exit',c=>{exit=c;exited=true;});for(const s of [child.stdout,child.stderr])s.on('data',b=>{if(log.length<100000)log+=b;});
  let ws;try{
   let port;for(let i=0;i<600;i++){const m=log.match(/DevTools listening on ws:\/\/127\.0\.0\.1:(\d+)\//);if(m){port=+m[1];break;}if(exit!==null)throw Error('DELIVERY_EXIT '+exit+' '+log.slice(-2000));await delay(50);}assert.ok(port,'Loopback debug endpoint unavailable');
   let page;for(let i=0;i<600;i++){const pages=await fetch('http://127.0.0.1:'+port+'/json/list').then(r=>r.json());page=pages.find(p=>p.type==='page'&&p.webSocketDebuggerUrl);if(page)break;await delay(50);}assert.ok(page,'Native delivery window unavailable');
@@ -18,11 +18,11 @@ async function smoke(exe,slug){
   const font=await evaluate(`(async()=>{await document.fonts.load('18px "ZTH UI"');return [...document.fonts].some(f=>f.family.replaceAll('"','')==='ZTH UI'&&f.status==='loaded');})()`);assert.equal(font,true,'Final delivery CJK font');
   const scale=slug==='studio-desk'?'studioDesk':'studioDesktop';await evaluate(scale+'.interface(1.25)');assert.equal(await evaluate('(async()=> (await '+scale+'.interface()).zoom)()'),1.25);
   await evaluate("document.querySelectorAll('dialog').forEach(d=>d.close());void 0");
-  // CDP only belongs to this ephemeral runner process and is never in a shortcut.
-  await call('Page.close');for(let i=0;i<40&&exit===null;i++)await delay(50);if(exit===null)void call('Browser.close').catch(()=>{});for(let i=0;i<200&&exit===null;i++)await delay(50);
-  if(exit===null){child.kill();throw Error('DELIVERY_CLOSE_TIMEOUT');}assert.equal(exit,0);
-  return{passed:true,checks:['Untouched extracted application starts with production entrypoint','Bundled Chinese font loads','Native interface zoom works','Normal window close exits cleanly']};
- }finally{ws?.close();if(exit===null)child.kill();}
+  // A CDP Page.close closes a debugging target, not necessarily its Electron
+  // native window. Stop only this synthetic process; do not claim OS-close QA.
+  await delay(500);ws.close();child.kill();for(let i=0;i<200&&!exited;i++)await delay(50);assert.ok(exited,'Synthetic delivery process did not terminate');
+  return{passed:true,checks:['Untouched extracted application starts with production entrypoint','Bundled Chinese font loads','Native interface zoom works'],cleanup:'Only the isolated synthetic smoke process was terminated after checks; native window-close behavior is a separate acceptance scope.'};
+ }finally{ws?.close();if(!exited)child.kill();child.stdout?.destroy();child.stderr?.destroy();}
 }
 async function verify(result,{root=__dirname}={}){
  const config=JSON.parse(await fs.readFile(path.join(root,'product.json'),'utf8')),dir=path.join(result.work,'delivery-check');await fs.mkdir(dir);const names=await fs.readdir(result.release),reports=[];
