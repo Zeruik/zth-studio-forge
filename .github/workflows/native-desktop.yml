@@ -50,6 +50,7 @@ jobs:
       - name: Build, run, reopen, verify and package the native application
         env:
           GH_TOKEN: ${{ github.token }}
+          ZTH_EXPECTED_TARGET: ${{ matrix.target }}
           ZTH_UPLOAD_DRAFT: ${{ inputs.upload_to_new_draft || false }}
           ZTH_RELEASE_TAG: ${{ inputs.release_tag }}
         run: node ci-native.cjs

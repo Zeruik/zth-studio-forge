@@ -20,7 +20,7 @@ if(!app.requestSingleInstanceLock())app.quit();else{
   fs.mkdirSync(app.getPath('userData'),{recursive:true,mode:0o700});
   if(fs.lstatSync(app.getPath('userData')).isSymbolicLink())throw Error('PROFILE_DIRECTORY_LINK');if(process.platform!=='win32')fs.chmodSync(app.getPath('userData'),0o700);
   const display=windowPreferences({file:path.join(app.getPath('userData'),'window.json'),screen,width:1440,height:960});
-  win=display.attach(new BrowserWindow({...display.bounds,show:false,backgroundColor:config.background||'#f6f3ed',icon:path.join(__dirname,'icon.ico'),webPreferences:{preload:path.join(__dirname,'preload.cjs'),nodeIntegration:false,contextIsolation:true,sandbox:true,webSecurity:true}}));
+  win=display.attach(new BrowserWindow({...display.bounds,show:false,backgroundColor:config.background||'#f6f3ed',icon:process.platform==='linux'&&app.isPackaged?path.join(path.dirname(process.execPath),'app.png'):path.join(__dirname,'icon.ico'),webPreferences:{preload:path.join(__dirname,'preload.cjs'),nodeIntegration:false,contextIsolation:true,sandbox:true,webSecurity:true}}));
   handle('studio:interface',value=>value===undefined?display.info():display.setZoom(value));
   if(process.platform==='darwin')Menu.setApplicationMenu(Menu.buildFromTemplate([{role:'appMenu'},{role:'editMenu'},{label:'显示 / View',submenu:[{label:'放大 / Zoom in',click:()=>display.setZoom(Math.min(1.5,display.info().zoom+.1))},{label:'缩小 / Zoom out',click:()=>display.setZoom(Math.max(.75,display.info().zoom-.1))},{label:'实际大小 / Actual size',click:()=>display.setZoom(1)},{role:'togglefullscreen'}]},{role:'windowMenu'}]));
   win.once('ready-to-show',()=>win.show());

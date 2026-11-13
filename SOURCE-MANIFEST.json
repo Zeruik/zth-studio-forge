@@ -9,8 +9,8 @@
     },
     {
       "path": ".github/workflows/native-desktop.yml",
-      "size": 2195,
-      "sha256": "730acedfe215e910dd88e702a386ad2118d0e871498a93304785fa7825f38281"
+      "size": 2247,
+      "sha256": "957d29ae641579044e2ff638807591c895c1ec4628326bc7907c7f62110b832e"
     },
     {
       "path": ".gitignore",
@@ -64,13 +64,13 @@
     },
     {
       "path": "build-runtime/package-lock.json",
-      "size": 46528,
-      "sha256": "c7d182d6381e9c4f3e9ce6c621367d84d73aae0d969571e1058bd94fe67aa546"
+      "size": 42213,
+      "sha256": "9b691ae34bec3a40793a07e77afe4b183dbedc18400131bb2b8279a2403e7cd1"
     },
     {
       "path": "build-runtime/package.json",
-      "size": 283,
-      "sha256": "31327091bda47437f74e9f1fe88dfa73be81a52dedb65b2327c0e756a2232582"
+      "size": 281,
+      "sha256": "462a50228219e92a1dce8deb27735cf277f37cef0aebf2307c12f1e8bddea0eb"
     },
     {
       "path": "catalog-browser.js",
@@ -85,12 +85,12 @@
     {
       "path": "CI-ACTIONS.json",
       "size": 765,
-      "sha256": "ff357e72bd9eab576ea4c2ee6ad53f0199064f1748f40f3cb7a3f1a765664c38"
+      "sha256": "5b71d986aabbe0559d55c274204c0f0cb7f22308731fceefd7925055215bab7f"
     },
     {
       "path": "ci-native.cjs",
-      "size": 2326,
-      "sha256": "5e26003820ce107e0bbb072850acbbdf233ace56dc1eb31e817a762f85bbe465"
+      "size": 2461,
+      "sha256": "5acf85c0d151f233154555d81f2b51cf2e1d575cf0ef81d6d6641ef563e5ade0"
     },
     {
       "path": "cross-platform.cjs",
@@ -129,8 +129,8 @@
     },
     {
       "path": "desktop/main.cjs",
-      "size": 9796,
-      "sha256": "30ffe2825cd5203df371b19cde9f2bac31d885b7ed9d2e644b07cd9d4f54bcf6"
+      "size": 9891,
+      "sha256": "f2ef73312834a8d5633b7014d5970a7b9cde55bdfb8a51e0137b489d36b5a9f0"
     },
     {
       "path": "desktop/platform.cjs",
@@ -154,8 +154,8 @@
     },
     {
       "path": "desktop-shell.cjs",
-      "size": 9796,
-      "sha256": "30ffe2825cd5203df371b19cde9f2bac31d885b7ed9d2e644b07cd9d4f54bcf6"
+      "size": 9891,
+      "sha256": "f2ef73312834a8d5633b7014d5970a7b9cde55bdfb8a51e0137b489d36b5a9f0"
     },
     {
       "path": "display-controls.css",
@@ -249,8 +249,8 @@
     },
     {
       "path": "qa-native-platform.cjs",
-      "size": 13806,
-      "sha256": "a0012ac2a4bce40780abe404b36f668ad8d54ba83f560073647a80b79316fb44"
+      "size": 14447,
+      "sha256": "a2f1fb81fb843499f8172551f3080ecd63f610b1d51798e70a1fda85ae7eb157"
     },
     {
       "path": "qa-platform.cjs",

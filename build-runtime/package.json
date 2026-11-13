@@ -1,9 +1,9 @@
 {
-  "name": "zth-studio-desk-build-runtime",
-  "version": "4.0.0",
+  "name": "zth-studio-build-tools",
+  "version": "1.0.0",
   "private": true,
+  "description": "Pinned development tools, separate from application version numbers",
   "license": "MIT",
-  "description": "Pinned development dependencies; never shipped as node_modules",
   "dependencies": {
     "rcedit": "5.0.2",
     "sharp": "0.35.5",
