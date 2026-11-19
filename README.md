@@ -66,3 +66,5 @@ Created by TechABJ for Fuxing Zaowu Studio, a sub-studio of Xiangyang Science & 
 Original tool code follows its LICENSE; logo rights remain reserved. Separately labelled Academy and authored robotics teaching content retain their content terms and are not automatically MIT. Third-party runtimes, fonts and libraries retain their own licenses.
 
 联系 / Contact: zeruik@qq.com · [作者主页 / Creator](https://github.com/Zeruik)
+
+维护补丁发布：维护者推送新的 `vX.Y.Z` 标签后，`Publish verified patch release` 会核对仓库、操作者、标签提交，以及同一提交的基础回归、Linux/macOS 原生验收和 Windows 验收。仅在五个平台的九个包与校验清单齐全时创建新草稿、逐项上传并核对远端摘要，再公开 Release。已有资产不会被覆盖；失败时保留草稿供核对。原生构建工作流的手动草稿上传参数仍保持显式授权。

@@ -30,3 +30,4 @@ jobs:
           node qa-package-permissions.cjs
           node qa-platform.cjs
           node qa-window-preferences.cjs
+          node --test qa-publication.test.cjs
