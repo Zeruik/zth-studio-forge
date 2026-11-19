@@ -12,7 +12,7 @@
 
 17 mocked environment checks; 6 native-environment groups; 9 dataset groups; 8 generated workspace groups (real host C++ compile/run and Python execution); 4 DOM groups; platform/window-preference contracts passed.
 
-Additional check: node qa-package-permissions.cjs passed with a real synthetic DEB under umask 077.
+Additional checks: node qa-package-permissions.cjs passed with a real synthetic DEB under umask 077. Actual Linux x64 TAR and DEB builds passed using checksum-pinned runtimes; SHA256SUMS and installed payload permissions were verified. These are validation builds with the current version number, not next-version release assets. No GUI/install lifecycle acceptance was performed.
 
 New portable-regression CI workflows, where present, have not yet been observed running on GitHub. They use synthetic data and do not replace native acceptance.
 
