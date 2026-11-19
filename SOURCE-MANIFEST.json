@@ -119,8 +119,8 @@
     },
     {
       "path": "cross-platform.cjs",
-      "size": 17734,
-      "sha256": "e8302790dd5018ca5d4eebb5df8ae59d81cd49a9dfa30985cfed5e52b0f4e3f0"
+      "size": 17807,
+      "sha256": "6bfe8f88a0868d0393b28ca64c70a7850fc30e0b9bd62ea53ba13acb28c24292"
     },
     {
       "path": "cross-runtime-lock.json",
@@ -279,8 +279,8 @@
     },
     {
       "path": "qa-package-permissions.cjs",
-      "size": 1703,
-      "sha256": "eaee5005ec6ac7c295e97108df50513908e830445dc72424dd982295233d0716"
+      "size": 1872,
+      "sha256": "40b6cd04e35ef822bcfa86efb98ea0f6067365282b346919823cba5d0bac472c"
     },
     {
       "path": "qa-platform.cjs",

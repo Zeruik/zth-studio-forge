@@ -32,8 +32,8 @@ async function build({root=__dirname,out=path.join(root,'out','native'),cache=pa
 async function packagePermissions(root){
  const st=await fs.lstat(root);
  if(st.isSymbolicLink())return;
- if(st.isDirectory()){await fs.chmod(root,0o755);for(const name of await fs.readdir(root))await packagePermissions(path.join(root,name));}
- else if(st.isFile())await fs.chmod(root,(st.mode&0o7000)|(st.mode&0o111?0o755:0o644));
+ if(st.isDirectory()){if((st.mode&0o7777)!==0o755)await fs.chmod(root,0o755);for(const name of await fs.readdir(root))await packagePermissions(path.join(root,name));}
+ else if(st.isFile()){const mode=(st.mode&0o7000)|(st.mode&0o111?0o755:0o644);if((st.mode&0o7777)!==mode)await fs.chmod(root,mode);}
  else throw Error('PACKAGE_ENTRY');
 }
 async function packageBuild(result,{root=__dirname}={}){const c=JSON.parse(await fs.readFile(path.join(root,'product.json'),'utf8')),release=path.join(result.work,'release');await fresh(release);const stem=c.folder+'-'+(result.mac?'macOS':'Linux')+'-'+process.arch+'-v'+c.version,notes=path.join(release,'README.txt');await fs.writeFile(notes,`${c.name} ${c.version}\nCreator: 理工阿白菌 / TechABJ · 赋形造物工作室 / 向阳科创工作室\n\nApplication runtimes are bundled. Your projects and archives are stored in your user-data directory, outside the application. Export backups before upgrading; replace the application, keeping your data. No PATH changes.\n\n${result.mac?'Move the application to Applications, then open it. This package has an ad-hoc integrity signature only: no Developer ID or Apple notarization is available. macOS may require its normal explicit opening approval. Do not disable system security.':'Install the DEB using your distribution’s graphical package installer, or extract the archive. Chromium sandbox support and desktop system libraries are required; the app never adds --no-sandbox. On systems with restricted unprivileged user namespaces, use the DEB sandbox helper configured by the system package installer.'}\n\n运行时已包含；个人资料位于当前用户的数据目录，不在应用程序内。升级前导出备份，替换应用时保留资料。请查阅应用内的许可证和平台说明。\n`);
