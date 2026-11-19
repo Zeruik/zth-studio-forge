@@ -114,8 +114,8 @@
     },
     {
       "path": "ci-native.cjs",
-      "size": 3005,
-      "sha256": "ed62ab8bde859ddf97b90d387327695208e4c03202408d3db82a6f493ae82280"
+      "size": 3126,
+      "sha256": "403ae6d0601cb1c4acb7df5c5c4635097ff277320394fcd85af1171fd256b090"
     },
     {
       "path": "cross-platform.cjs",
