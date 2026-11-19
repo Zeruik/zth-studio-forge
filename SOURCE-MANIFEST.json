@@ -13,6 +13,11 @@
       "sha256": "9c5beb5cf29352f232a27411c8aada9bb0987f870562c02e3f3eda63c615d048"
     },
     {
+      "path": ".github/workflows/portable-regression.yml",
+      "size": 988,
+      "sha256": "c64b3933688df63cacc0d35a1b459131a95debece7901868083cc07c824a2a6d"
+    },
+    {
       "path": ".gitignore",
       "size": 158,
       "sha256": "0557b19135ed2659e98f1dc6febbb1b7fa1b2bbaa908a254fa17cbbe43cbe11c"
@@ -26,6 +31,31 @@
       "path": "APP-FILES.json",
       "size": 759,
       "sha256": "98672be937c604814fde14f9347d204a3c0278e38d9f8696e698a946fcf5ed0d"
+    },
+    {
+      "path": "CI-ACTIONS.json",
+      "size": 765,
+      "sha256": "7e1551f850a166f4e3d9bbd26baa410ddffd1d6fd06f2e93bf602beae709205e"
+    },
+    {
+      "path": "LICENSE",
+      "size": 1073,
+      "sha256": "4ec950bd1257e44455aac2d4327dc4363b3c30050a3e36324f7e25d380cd9b1d"
+    },
+    {
+      "path": "NEXT-RELEASE.md",
+      "size": 1588,
+      "sha256": "9bb8415e09d77996fa92ba4add5fccce7c202cda620ec96b5fe3e8450c3060f9"
+    },
+    {
+      "path": "README.md",
+      "size": 7825,
+      "sha256": "8efdeec1f54492cc4971f604571999bb8ad8bedb29b1e60cd4207ea0f1b57039"
+    },
+    {
+      "path": "THIRD-PARTY.md",
+      "size": 291,
+      "sha256": "72ed5accbd755f436af62332ca9d7a7e09ec854afddb3d817fa6c819ab0f919a"
     },
     {
       "path": "app.js",
@@ -83,11 +113,6 @@
       "sha256": "622d3bd27b973efddf8d7034e846c2210e09271a8a2a58ef570a8daa89a7a5e7"
     },
     {
-      "path": "CI-ACTIONS.json",
-      "size": 765,
-      "sha256": "7e1551f850a166f4e3d9bbd26baa410ddffd1d6fd06f2e93bf602beae709205e"
-    },
-    {
       "path": "ci-native.cjs",
       "size": 3005,
       "sha256": "ed62ab8bde859ddf97b90d387327695208e4c03202408d3db82a6f493ae82280"
@@ -123,6 +148,11 @@
       "sha256": "62913b5d802f5bccb7ab2568c580525d87a87e26ac1c1710ea761a85af2dc27d"
     },
     {
+      "path": "desktop-shell.cjs",
+      "size": 9891,
+      "sha256": "f2ef73312834a8d5633b7014d5970a7b9cde55bdfb8a51e0137b489d36b5a9f0"
+    },
+    {
       "path": "desktop/icon.ico",
       "size": 20733,
       "sha256": "62f5411a64b0a28e8190ab23bb7ea8e48cc52bb011e258a888fd60051127464d"
@@ -153,11 +183,6 @@
       "sha256": "bdec4a7da397bada844ee45b0978fa1c2412101d0f2b3ef14965d454cf3c80f8"
     },
     {
-      "path": "desktop-shell.cjs",
-      "size": 9891,
-      "sha256": "f2ef73312834a8d5633b7014d5970a7b9cde55bdfb8a51e0137b489d36b5a9f0"
-    },
-    {
       "path": "display-controls.css",
       "size": 1560,
       "sha256": "40c367a306e9bc932f56a2e06c5b2e20e5d99d37dc2d6ad47771a062ef8a788b"
@@ -186,11 +211,6 @@
       "path": "learning-paths.js",
       "size": 11719,
       "sha256": "c3e1a80a0d95540b9896926a32492c163dd27830407758077d08ad310d34d05f"
-    },
-    {
-      "path": "LICENSE",
-      "size": 1073,
-      "sha256": "4ec950bd1257e44455aac2d4327dc4363b3c30050a3e36324f7e25d380cd9b1d"
     },
     {
       "path": "logo.svg",
@@ -279,13 +299,8 @@
     },
     {
       "path": "qa.cjs",
-      "size": 11439,
-      "sha256": "b96f9980816e87f9f640e9e383de18931d223b7f8b7b78b730cbeacfffde0db9"
-    },
-    {
-      "path": "README.md",
-      "size": 7825,
-      "sha256": "8efdeec1f54492cc4971f604571999bb8ad8bedb29b1e60cd4207ea0f1b57039"
+      "size": 11664,
+      "sha256": "17e01f8b39466b166a0840fe59e9171fccf0d146bc3fac9c9b87146fcafc07a3"
     },
     {
       "path": "runtime-lock.json",
@@ -301,11 +316,6 @@
       "path": "styles.css",
       "size": 8691,
       "sha256": "7aa26e981c8b554e0f36437fe1bc6ae934db4ec105093a31c15a9d2659bc8c06"
-    },
-    {
-      "path": "THIRD-PARTY.md",
-      "size": 291,
-      "sha256": "72ed5accbd755f436af62332ca9d7a7e09ec854afddb3d817fa6c819ab0f919a"
     },
     {
       "path": "typography.css",

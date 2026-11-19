@@ -1,0 +1,31 @@
+name: Portable source regression
+on:
+  push:
+    branches: [main, 'iteration/**', 'release/**']
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+      - name: Source regression (synthetic data; no hardware or system installation)
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci --prefix build-runtime --no-audit --no-fund
+          node qa.cjs
+          node qa-native-environment.cjs
+          node qa-dataset-tools.cjs
+          ZTH_HOST_CXX=/usr/bin/g++ node qa-workspaces.cjs "$(command -v python3)"
+          node qa-ui.cjs
+          node qa-platform.cjs
+          node qa-window-preferences.cjs
