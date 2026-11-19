@@ -54,6 +54,13 @@ jobs:
           ZTH_UPLOAD_DRAFT: ${{ inputs.upload_to_new_draft || false }}
           ZTH_RELEASE_TAG: ${{ inputs.release_tag }}
         run: node ci-native.cjs
+      - name: Retain verified candidate packages for release preparation
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: candidate-${{ matrix.target }}-${{ github.sha }}
+          path: out/native/*/release/*
+          if-no-files-found: error
+          retention-days: 7
       - name: Retain compact synthetic acceptance proof for one day
         if: always()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
