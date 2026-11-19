@@ -18,6 +18,11 @@
       "sha256": "ac855c8d40a329d7930e0b3fc9e2ec258f6515aaa5b62a9855f2665daf8682b6"
     },
     {
+      "path": ".github/workflows/windows-candidate.yml",
+      "size": 2314,
+      "sha256": "60ed942114f5f65d23d7224c3851ca48449e3ddbd749607d6adef28b41b60ef6"
+    },
+    {
       "path": ".gitignore",
       "size": 158,
       "sha256": "0557b19135ed2659e98f1dc6febbb1b7fa1b2bbaa908a254fa17cbbe43cbe11c"
@@ -116,6 +121,11 @@
       "path": "ci-native.cjs",
       "size": 3126,
       "sha256": "403ae6d0601cb1c4acb7df5c5c4635097ff277320394fcd85af1171fd256b090"
+    },
+    {
+      "path": "ci-windows.cjs",
+      "size": 2895,
+      "sha256": "e49379f6ae89901b5f1537c1048261858992236963f4db5256434f544a2fcea3"
     },
     {
       "path": "cross-platform.cjs",
