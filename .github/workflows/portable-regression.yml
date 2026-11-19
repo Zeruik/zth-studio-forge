@@ -27,5 +27,6 @@ jobs:
           node qa-dataset-tools.cjs
           ZTH_HOST_CXX=/usr/bin/g++ node qa-workspaces.cjs "$(command -v python3)"
           node qa-ui.cjs
+          node qa-package-permissions.cjs
           node qa-platform.cjs
           node qa-window-preferences.cjs

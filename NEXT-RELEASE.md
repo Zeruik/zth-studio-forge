@@ -6,9 +6,13 @@
 
 更新过时的平台回归断言：Linux/macOS 支持只读检测和手动计划，但不能自动执行 Windows 安装器；补充持续回归 workflow。
 
+另修复 Linux 打包权限：生成的 TAR/DEB 负载和控制目录使用明确的公开读取/执行权限，不继承开发机器的私有 umask；新增 umask 077 下实际构建 DEB 的回归测试。
+
 ## 当前云实例验证 / Current cloud validation
 
 17 mocked environment checks; 6 native-environment groups; 9 dataset groups; 8 generated workspace groups (real host C++ compile/run and Python execution); 4 DOM groups; platform/window-preference contracts passed.
+
+Additional check: node qa-package-permissions.cjs passed with a real synthetic DEB under umask 077.
 
 New portable-regression CI workflows, where present, have not yet been observed running on GitHub. They use synthetic data and do not replace native acceptance.
 

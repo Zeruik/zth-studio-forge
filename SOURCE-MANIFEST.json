@@ -14,8 +14,8 @@
     },
     {
       "path": ".github/workflows/portable-regression.yml",
-      "size": 988,
-      "sha256": "c64b3933688df63cacc0d35a1b459131a95debece7901868083cc07c824a2a6d"
+      "size": 1030,
+      "sha256": "ac855c8d40a329d7930e0b3fc9e2ec258f6515aaa5b62a9855f2665daf8682b6"
     },
     {
       "path": ".gitignore",
@@ -44,8 +44,8 @@
     },
     {
       "path": "NEXT-RELEASE.md",
-      "size": 1588,
-      "sha256": "9bb8415e09d77996fa92ba4add5fccce7c202cda620ec96b5fe3e8450c3060f9"
+      "size": 1898,
+      "sha256": "6819abf98dbb1153cbbbea23024beaf4a1c6903d40ecd4c130252ef63e66a4cb"
     },
     {
       "path": "README.md",
@@ -119,8 +119,8 @@
     },
     {
       "path": "cross-platform.cjs",
-      "size": 17174,
-      "sha256": "9cddc27022e4e7cb414009cc4db673a69d4032ca586e45915b38932eb4eee8bf"
+      "size": 17734,
+      "sha256": "e8302790dd5018ca5d4eebb5df8ae59d81cd49a9dfa30985cfed5e52b0f4e3f0"
     },
     {
       "path": "cross-runtime-lock.json",
@@ -276,6 +276,11 @@
       "path": "qa-package-native.cjs",
       "size": 6797,
       "sha256": "380c425cb0a04054bac8f52f0683dd873efdd24eacbf0ec35e01f9806f248cf4"
+    },
+    {
+      "path": "qa-package-permissions.cjs",
+      "size": 1703,
+      "sha256": "eaee5005ec6ac7c295e97108df50513908e830445dc72424dd982295233d0716"
     },
     {
       "path": "qa-platform.cjs",
