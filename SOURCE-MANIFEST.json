@@ -1,6 +1,6 @@
 {
   "product": "forge",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "files": [
     {
       "path": ".gitattributes",
@@ -10,7 +10,7 @@
     {
       "path": ".github/workflows/native-desktop.yml",
       "size": 2276,
-      "sha256": "9c5beb5cf29352f232a27411c8aada9bb0987f870562c02e3f3eda63c615d048"
+      "sha256": "ca5c1c3054f15a53057794e481754bc7f886e07b5d8ea70857c62c0793f52670"
     },
     {
       "path": ".github/workflows/portable-regression.yml",
@@ -44,13 +44,13 @@
     },
     {
       "path": "NEXT-RELEASE.md",
-      "size": 2179,
-      "sha256": "6893768d702cdeef09987cd1db98ffe4dee981c206e2d2b4b69b201372ac9f98"
+      "size": 2194,
+      "sha256": "44520f415f372e9d478f3103a8421f06b3889fd9fc1f89ccaa97c58529956f82"
     },
     {
       "path": "README.md",
       "size": 7825,
-      "sha256": "8efdeec1f54492cc4971f604571999bb8ad8bedb29b1e60cd4207ea0f1b57039"
+      "sha256": "eb1a16097052c4a732c46157000be71dca12b4f29fec7cc34a0734acedab29f0"
     },
     {
       "path": "THIRD-PARTY.md",
@@ -60,7 +60,7 @@
     {
       "path": "app.js",
       "size": 22221,
-      "sha256": "3425742fab12d92100433605dc95f8ac7424f4f7345272c398bb60b38ae56858"
+      "sha256": "bbeab2229d8b59625c477faccaec153af00946516d3e232cb7880f964ac7a825"
     },
     {
       "path": "assets/fonts/NotoSansSC.ttf",
@@ -200,7 +200,7 @@
     {
       "path": "index.html",
       "size": 2222,
-      "sha256": "cbd25a2cb1571ff756021546861e3f00dd851c5a0271ebdab6abf08ff81ad4b0"
+      "sha256": "8dae9e2f95a54b9257f99e64a1a1701b13feb7249a164b246d33ba4093766318"
     },
     {
       "path": "installer-template.cjs",
@@ -230,7 +230,7 @@
     {
       "path": "package.json",
       "size": 148,
-      "sha256": "09b238c7472b66990b87886820f34f6ace46bfb42fd091531049824d9cde53fa"
+      "sha256": "8b6a5840029dc80e6c0e566f23a2f3aa89557795a73e2f3a9744573c2a52f678"
     },
     {
       "path": "platform.cjs",
@@ -245,7 +245,7 @@
     {
       "path": "product.json",
       "size": 542,
-      "sha256": "3eeeaad2a04741e84e6850bd9a1df065c9cc3587704ee820e54063d789afc1eb"
+      "sha256": "fdb915306bca08aab26992918e50f53cd164fdf78e56aea0da6afcaac43f3282"
     },
     {
       "path": "profile-directory.cjs",

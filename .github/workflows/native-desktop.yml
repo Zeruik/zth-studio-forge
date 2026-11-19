@@ -11,7 +11,7 @@ on:
       release_tag:
         description: Must equal product.json version with a v prefix
         type: string
-        default: v3.0.0
+        default: v3.0.1
 permissions:
   contents: write
 concurrency:

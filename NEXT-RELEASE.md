@@ -1,6 +1,6 @@
 # 下一轮维护计划 / Next maintenance iteration
 
-目标：3.0.1（候选规划，尚未发布；版本字段和旧标签保持当前值）。
+目标：3.0.1（候选分支已同步版本字段，尚未发布；旧标签保持不变）。
 
 ## 已实现 / Implemented
 
@@ -14,7 +14,7 @@
 
 Additional checks: node qa-package-permissions.cjs passed with a real synthetic DEB under umask 077. Actual Linux x64 TAR and DEB builds passed using checksum-pinned runtimes; SHA256SUMS and installed payload permissions were verified. These are validation builds with the current version number, not next-version release assets. No GUI/install lifecycle acceptance was performed.
 
-New portable-regression CI workflows, where present, have not yet been observed running on GitHub. They use synthetic data and do not replace native acceptance.
+The maintenance-branch portable regression succeeded on GitHub. Local regression also passed on Node 22.23.5. Native candidate CI is required separately before publication.
 
 ## 建议优化 / Recommended follow-up
 
